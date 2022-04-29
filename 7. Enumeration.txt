@@ -1,0 +1,59 @@
+                                                                  Enumeration
+
+Enumeration is defined as the process of extracting user names, machine names, network resources, shares and services from a system.
+In this phase, the attacker creates an active connection to the system and performs directed queries to gain more information about the target.
+The gathered information is used to identify the vulnerabilities or weak points in system security and tries to exploit in the System gaining phase.
+Enumeration is the key to a Successful Penetration Tester.
+
+Which Types of Details we find in Enumeration :
+
+Network Resource and shares
+Users and Groups
+Routing tables
+Auditing and Service settings
+Machine names
+Applications and banners
+DNS details
+Machine name
+Dirctory enumerate
+
+Nbtscan : NBTscan is a program for scanning IP networks for NetBIOS name information. For each responded host it lists IP address, NetBIOS computer 
+name, logged-in user name and MAC address.
+Command - #nbtscan -r (ip range)(subnetting) - nbtscan -r 192.168.1.1/24 - For Ip Range
+Command - #nbtscan ip address - 192.168.10.9 - For single ip
+
+smbmap : SMBMap allows users to enumerate samba share drives across an entire domain. List share, drives, drive permissions, share  contents,  upload/download 
+functionality,  file  name etc. This tool intended is to simplify searching for potentially sensitive data across large networks.
+Command - #smbmap -H <Host ip> - smbmap -H 192.168.10.9
+Command - #smbmap -H <host ip> -d <domain name> -u <username> -p <password> - smbmap -H 192.168.223.128 -d metasploitable -u msfadmin -p msfadmin
+
+Nmap : Following Script attempts to detect if a Microsoft SMBv1 server is vulnerable to a remote code execution vulnerability.
+Command - #nmap --script smb-vuln* -p 139,445 <host ip> -d - #nmap --script smb-vuln* -p 139,445 192.168.10.9 -d
+Use -d if it doesn't work
+
+SMTP enumeration can be performed in many ways. The easiest way to do this is by connecting to the SMTP service port of the target with telnet.
+#telnet <host ip address> <port number>
+#telnet 192.168.223.128 25
+Use the VRFY command to check if users “user”, “msfadmin” and “root” exist in this system.
+#telnet <host ip address> <port number>
+#telnet 192.168.223.128 25
+#vrfy admin
+#vrfy msfadmin
+#vrfy user
+
+Enum4linux : enum4linux tool allow us to extract usernames and more information from target.
+Command - #enum4linux -a <ip address> - enum4linux -a 192.168.1.17
+
+Metasploit :
+Username enumeration through smtp using metasploit. 
+
+#msfconsole
+#use auxiliary/scanner/smtp/smtp_enum
+#auxiliary(smtp_enum) > set rhosts 192.168.1.107
+#auxiliary(smtp_enum) > set rport 25
+#auxiliary(smtp_enum) > set USER_FILE /root/Desktop/user.txt
+#auxiliary(smtp_enum) > exploit
+
+Dirb : We can use dirb tool for enumerating directories if http port 80 is open
+Command - #dirb <ip address> - dirb http://192.168.1.17 
+#dirb <ip address or domain name> <wordlist path> - dirb http://192.168.1.17 /root/usr/share/dirb/wordlists.big.txt

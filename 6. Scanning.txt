@@ -1,0 +1,77 @@
+                                                                          Scanning
+
+After footprinting scanning is the second phase of information gathering that hackers use to size up a network. Scanning is where they dive deeper into the
+system to look for valuable data and services in a specific IP address range.
+In scanning part identify the Live system, open ports, Services, OS, Network Scan, Vulnerability scan.
+
+/usr/share/nmap/scripts
+Lua Language
+
+For Local/Network network scan :
+#arp-scan -l
+#netdiscover -r <ip range>
+#nmap -sn <ip range>
+
+Port Status Types
+With nmap you would see one of four port status types:
+
+Open - It means that the port is accessible and an application is listening on it.
+Closed - It means that the port is inaccessible and no application is listening on it.
+Filtered - It means that nmap is not able to figure out if the port is open or closed, as the packets
+are being filtered, which probably means that the machine is behind a firewall.
+Unfiltered — It means that the ports are accessible by nmap but it is not possible to figure out if
+they are open or closed.
+
+Before understanding how port scanning works, we need to understand how the TCP threeway
+handshake works.
+The transmission control protocol (TCP) was made for reliable communication. It is used for a
+wide variety of protocols on the Internet and contributes toward reliable communication with the
+help of the three-way handshake.
+SYN
+SYN/ACK
+ACK
+First host sends a SYN packet to the second host.
+Second host responds with a SYN/ACK packet, it indicates that the packet was received.
+First host completes the connection by sending an acknowledgment packet.
+TCP Flags
+SYN - Initiates a connection.
+ACK - Acknowledges that the packet was received.
+RST - Resets the connections between two hosts.
+FIN - Finishes the connection.
+PSH - Sends all data immediately.
+URG - Data contained in the packet should be processed immediately.
+
+
+Nmap commands :
+#nmap <ip address> - For Normal scan
+#nmap <ip address> -v - Normal scan with verbosity
+#nmap <ip address> -Pn  - Use this if target system is blocking your request
+#nmap <ip address> 21,22,25,80 -v -p - For scanning specific ports
+#nmap <ip address> -p 0-65535 - For scanning all ports
+#nmap <ip address> -sV - For services and their version
+#nmap <ip address> -A - For aggressive/all scan
+
+Scanning your target network through NMAP Timing Technique
+The timing technique is one of the best techniques to evade firewalls/IDS. The idea behind this
+technique is to send the packets gradually, so they do not end up being detected by firewalls/IDS.
+In nmap we can launch a timing scan by specifying the T command followed by a number ranging
+from 0 to 5. Increasing the values from T0 to T5 would increase the speed of the scan.
+◾◾ -T0—Paranoid
+◾◾ -T1—Sneaky
+◾◾ -T2—Polite
+◾◾ -T3—Normal
+◾◾ -T4—Aggressive
+◾◾ -T5—Insane
+
+open a terminal in kali linux follow the steps to perform scanning -
+# Nmap –help (to check the other options regarding Nmap)
+# Nmap -A -T4 -r 192.168.0.1/24
+# Nmap -A -T4 -r 192.168.0.1/24 -D Local IP (attacker IP) = -D to hide your IP to be detected by the IDS of the victim’s PC
+# Nmap -A -T4 -r 192.168.0.1/24 -oG <name of the file> = -oG <name of the file> after scanning to create a file for storing the data output.
+# Nmap -A -T4 -r 192.168.0.1/24 > <name of the file> = > to specify the file.
+
+Some Other Tools for scanning
+Superscan3.0 – windows base tools to gather information about the target on the network to scan.
+AngryIPscanner – Both available for Linux and windows
+Nmap – tool is used to identify the target server like OS, open ports, service, vulnerability of the individual server.
+Zenmap - Graphical version of Nmap

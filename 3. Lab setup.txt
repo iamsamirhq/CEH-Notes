@@ -1,0 +1,13 @@
+                                                                     Lab Setup
+
+1. Vmware Workstation Pro or Oracle Virtual Box - https://www.vmware.com/in/products/workstation-pro/workstation-pro-evaluation.html
+
+2. Kali Linux latest version from official site, you can install vm/virtual based machine or direct kali installer it all depends on you. - https://www.kali.org/get-kali/
+
+3. Parrot Linux latest version from official site, you can install vm/virtual based machine or direct Parrot installer it all depends
+on you. - https://www.parrotsec.org/security-edition/
+
+4. Windows 10/8/7 - Install any of this two machine on vm or virtual box. - Windows 10 https://www.itechtics.com/windows-10-download-iso
+Windows 7 https://tech-latest.com/download-windows-7-iso/ - Or you can download from any website you want.
+
+5. Metasploitable 2 : This will be our hacking machine for web server. - https://sourceforge.net/projects/metasploitable/files/Metasploitable2/

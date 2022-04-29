@@ -1,0 +1,88 @@
+                                                         Basic Linux Commands and Information
+
+Let's start from some basic Commands - 
+
+I will use "This signs" " for parting command and text so don't think this signs is part of command"
+
+1 - #Touch = Command can be used for creating a Blank/Empty file. Also It can change the time of file or directory.
+#Touch file name = For changing the file time stamp.
+#Touch .filename.txt = For hiding the file from ls command.
+
+2 - #File "file name" = For checking file type.
+
+3 - #echo "the text you want to enter in file" > "file name" = This Command can be used for putting text into a file.
+
+4 - #cat "file name" = For viewing file's internal text on terminal.
+#cat "file name" = For creating a file and press ctrl+d for saving this file.
+#cat "file1 file2 file3" = For viewing multiple files.
+#cat "file1 file2 > file3" = For transferring file1 and file2 data to file3.
+
+5 - #ls = For short list
+#ls -l = For long list view
+#ls -a = For hidden files or directories.
+#ls -d file name = For Checking file permissions.
+#ls -h file name = For human readable format.
+#ls -i file name  = For file index number.
+#ls -t = For latest files first.
+#ls .. For going into parent/root directory.
+We can use multiple options together.
+
+6 - #mkdir file name = For Creating a directory.
+#mkdir .file name = For Creating a hidden directory.
+#mkdir data1/data2/data3/data4/data5 -pv" = For creating subdirectories in single file.
+#mkdir filename{1..10}" = For creating multiple folders.
+
+7 - #rmdir file name = For removing empty directory.
+#rm -vf file name = For removing a file.
+#rm -vr file name = For removing a directory.
+#rm -rf file name = For removing directory recursively.
+
+8 - #pwd = For viewing current working directory.
+
+9 - #mv "source file name" "destination file path" define a new name here if you want to change = For moving a file.
+#mv "old name" "new name" = For rename the file.
+
+10 - #cp "source file path" "destination file path" = For copying the file.
+#cp -r "source path" "destination path" = For copying a directory.
+#-v = For printing what has been done.
+#-p = For transferring ownership and time stamp.
+Note = You can use three of them together for multiple actions.
+
+11 - #History - This command help us to view previously used command.
+
+12 - #python -m SimpleHTTPServer 1337 - For creating a HTTP server in linux for transferring files.
+
+13 - #find or locate - For finding files in linux.
+
+14 - #whoami - For finding which user account you are logged in currently.
+
+15 - 
+
+Use # in front of command if you want to use terminal as textpad.
+
+Use #Man name of thing/tool" If you want to know the information and use of that tool/command.
+
+Use #which infroint of command if you want to know the command's path/location from where it's running.
+
+Use #echo $PATH = For all path or location.
+
+The /usr in this we can find installed software, shared libraries, include files and program data.
+
+The subdirectories include =
+/usr/bin = User Commands (Normal User)
+/usr/sbin = System Administration Commands (Super/Root User)
+/usr/local = Locally Authorised Software.
+/etc = Have all the configuration files.
+/var = Have all the database, cache directories, log files, printer spooled documents and websuite content may be
+found under this.
+/run = Have runtime data for processes started since the last boot. This includes process ID files and lock files, among
+other things. The content of this directory are recreated on reboot.
+/home = Have directories of regular users to store their personal data and configuration files.
+/root = Home directory of the superuser/root.
+/tmp = A world-writable space for temporary files. Files which have not been accessed, changed, or modified for
+10 days are deleted from this directory automatically.
+Another temporary directory exists, /var/tmp, in which files that have not been accessed, changed, or modified
+in more than 30 days are deleted automatically.
+Any user can save files in /tmp without any permission.
+/boot = Files needed in order to start the boot process.
+/dev = It contains special device files that are used by the system to access hardware.

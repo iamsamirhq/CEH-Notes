@@ -1,0 +1,61 @@
+                                                        Basic Computer Networking
+
+IP: Internet Protocol - IP Address is the network address of the system on the internet.
+
+MAC: Media Access Control - MAC Address is the unique identifier of each host and is associated with its NIC (Network Interface Card).
+Basically it's a physical address of device or and system.
+
+DNS Server: DNS stands for Domain Name System. It is a server which translates URL or web addresses into their corresponding IP addresses.
+
+Main types of network
+
+LAN: Local Area Network - LAN provides data communication within shorter distance and connects several devices such as computers and printers.
+
+WAN: Wide Area Network - Wide Area Network is connecting two or more LANs together, generally across a wide geographical area.
+WAN can be used to connect cities, states, or even countries.
+
+OSI Model: OSI stands for Open Systems Interconnection. It is a reference model that specifies standards for communications protocols and also the
+functionalities of each layer.
+
+TCP/IP Model: TCP/IP stands for Transmission Control Protocol/Internet Protocol and is a suite of communication protocols used to
+interconnect network devices on the internet.
+
+HTTP: HTTP: stands for Hypertext transfer protocol. This protocol allows us to access the data over the world wide web.
+It transfers the data in the form of plain text.
+
+HTTPS : Hypertext Transfer Protocol Secure (https) is a combination of the Hypertext Transfer Protocol (HTTP) with the Secure Socket Layer (SSL)/Transport
+Layer Security (TLS) protocol. TLS is an authentication and security protocol widely implemented in browsers and Web servers.
+
+TELNET: It establishes the connection between the local computer and remote computer in such a
+way that the local terminal appears to be a terminal at the remote system.
+
+SSH: The Secure Shell Protocol (SSH) is a cryptographic network protocol for operating network services securely over an unsecured network.
+SSH provides a secure channel over an unsecured network by using a client–server architecture, connecting an SSH client application with an SSH server.
+
+FTP: FTP stands for File Transfer Protocol. FTP is a standard internet protocol used for transmitting the files from one computer to another computer.
+
+What is Port - A port is a virtual point where network connections start and end. Ports are software-based and managed by a computer's operating system.
+Each port is associated with a specific process or service.
+
+Ports range start from 0 to 65535
+
+Some common/well/default known ports : 
+
+21 - File Transfer Protocol (FTP)
+22 - Secure Shell (SSH)
+23 - Telnet
+25 - Simple Mail Transfer Protocol (SMTP)
+53 - Domain Name System (DNS) service
+80 - Hypertext Transfer Protocol (HTTP)
+443- HTTP Secure (HTTPS)
+
+Proxy - A proxy server acts as a gateway between you and the internet.
+How proxy works - When you send a web request, your request goes to the proxy server first.Then the proxy server
+collect the response from the web server and forwards you to the web page data that you accesed in your browser. It can make changes to the data you send
+and still get you the information you expected and it can change your ip address, so the web server doesn't know exactly where you are in this world.
+It can encypt your data, so your data is unreadable in transmit.
+
+VPN - A VPN (virtual private network) is one of the best tools for ensuring your internet privacy. A VPN encrypts your connection and keeps you hidden
+while surfing, shopping, and banking online.
+
+Task from home - Read about osi and tcp/ip model layers.
